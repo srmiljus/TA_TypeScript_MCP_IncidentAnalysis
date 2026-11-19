@@ -1,0 +1,45 @@
+
+> auth-service@1.0.0 test:smoke
+> playwright test
+
+
+Running 10 tests using 2 workers
+
+  ok  1 tests\api\errors.spec.ts:14:3 › Error Handling › should return 404 for invalid POST endpoint (102ms)
+  ok  2 tests\api\errors.spec.ts:5:3 › Error Handling › should return 404 for non-existent endpoint (103ms)
+  ok  3 tests\api\health.spec.ts:4:3 › Health Endpoint › should return 200 and status ok (53ms)
+  x   4 tests\api\login.spec.ts:5:3 › Login Endpoint - Authentication › should login successfully with valid credentials (68ms)
+  ok  5 tests\api\login.spec.ts:24:3 › Login Endpoint - Authentication › should return 401 for wrong password (51ms)
+  ok  6 tests\api\login.spec.ts:52:3 › Login Endpoint - Authentication › should return 403 for blocked user (43ms)
+  ok  7 tests\api\validation.spec.ts:5:3 › Login Endpoint - Input Validation › should return 400 when email is missing (37ms)
+  ok  8 tests\api\validation.spec.ts:18:3 › Login Endpoint - Input Validation › should return 400 when password is missing (26ms)
+  ok  9 tests\api\validation.spec.ts:31:3 › Login Endpoint - Input Validation › should return 400 when both email and password are missing (30ms)
+  ok 10 tests\api\login.spec.ts:38:3 › Login Endpoint - Authentication › should return 401 for non-existent user (82ms)
+
+
+  1) tests\api\login.spec.ts:5:3 › Login Endpoint - Authentication › should login successfully with valid credentials 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+      11 |     });
+      12 |
+    > 13 |     expect(response.status()).toBe(200);
+         |                               ^
+      14 |
+      15 |     const body = await response.json();
+      16 |     expect(body.success).toBe(true);
+        at C:\Users\srmil\Desktop\ai-bootcamp-2\tests\api\login.spec.ts:13:31
+
+    Error Context: test-results\api-login-Login-Endpoint---81a56-ully-with-valid-credentials\error-context.md
+
+  1 failed
+    tests\api\login.spec.ts:5:3 › Login Endpoint - Authentication › should login successfully with valid credentials 
+  9 passed (3.5s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
