@@ -1,3 +1,5 @@
+> **Homework #3 solution:** see **[HOMEWORK.md](HOMEWORK.md)** for the smoke tests (Part 1), the MCP server for Docker logs and read-only database queries (Part 2), and the incident investigation case study (Part 3).
+
 # AuthService - Educational Microservice for QA Automation Training
 
 Welcome to **AuthService**, a simple but realistic authentication microservice designed for training QA automation engineers in working with AI agents to discover bugs and issues in systems.
