@@ -18,3 +18,5 @@ coverage/
 test-results/
 playwright-report/
 playwright/.cache/
+mcp-server/node_modules/
+mcp-server/dist/

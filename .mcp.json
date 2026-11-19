@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "authservice-inspector": {
+      "command": "node",
+      "args": [
+        "mcp-server/dist/index.js"
+      ]
+    }
+  }
+}
